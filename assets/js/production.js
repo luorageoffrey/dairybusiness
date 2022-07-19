@@ -1,4 +1,33 @@
 
+const daysOfWeek = 7;
+const leapYearDays = 366;
+
+class Month {
+    constructor(name, days){
+        this.name = name;
+        this.days = days;
+    }
+
+}
+
+const year = [
+    new Month("January", 31), 
+    new Month("February", 29), 
+    new Month("March", 31), 
+    new Month("April", 30), 
+    new Month("May", 31), 
+    new Month("June", 30), 
+    new Month("July", 31), 
+    new Month("August", 31), 
+    new Month("September", 30), 
+    new Month("October", 31), 
+    new Month("November", 30), 
+    new Month("December", 31), 
+
+]
+
+
+
 // get document variables
 const milkAmount = document.getElementById('milk-amount')
 
@@ -7,6 +36,7 @@ const shedInputs = document.getElementById('form-inputs');
 
 
 const dailyReport = document.getElementById('daily-report')
+
 const shedA = document.getElementById('shed-a')
 const shedB = document.getElementById('shed-b')
 const shedC = document.getElementById('shed-c')
@@ -56,6 +86,7 @@ let totalProduction = () => {
 
 //income over time section
 const incomeInputs = document.getElementById('income-inputs');
+var reportSection = document.getElementById('report-section')
 
 incomeInputs.addEventListener('submit', (event)=>{
     event.preventDefault();
@@ -74,16 +105,54 @@ incomeInputs.addEventListener('submit', (event)=>{
 
     //alert(duration.value)
 
-    calcIncomeReport(selling_price, time);
+    calcIncomeReport(selling_price.value, duration.value);
 }
 
 )
 
 function calcIncomeReport(selling_price, time){
 
-    //fetch data
+    console.log(time)
 
 
-    //alert("hello")
+    if(time == "week"){
+
+        let weeklyIncome = daysOfWeek * selling_price;
+
+        let yearlyIncome = leapYearDays * selling_price;
+
+        document.getElementById("weekly-income").innerHTML = weeklyIncome;
+
+        document.getElementById("yearly-income").innerHTML = yearlyIncome;
+
+    }else if(time == "month"){
+
+        reportSection.innerHTML = "month"
+
+    }else if(time == "year"){
+
+        let template = "";
+        let annualTotal = 0;
+
+        year.forEach(element => {
+
+            let monthName = element.name;
+            let monthlyTotal = element.days * selling_price;
+
+            template =  template +  `<p> Your income for ${monthName} is ${monthlyTotal}</p>`
+
+            annualTotal = annualTotal + monthlyTotal;           
+
+
+            
+        });
+
+        template = template + `<p> Your yearly income will be Ksh ${annualTotal} </p>`
+
+
+
+        reportSection.innerHTML = template
+
+    }
 
 }
