@@ -52,3 +52,38 @@ let totalProduction = () => {
     shedC.value = '';
     shedD.value = '';
 }
+
+
+//income over time section
+const incomeInputs = document.getElementById('income-inputs');
+
+incomeInputs.addEventListener('submit', (event)=>{
+    event.preventDefault();
+
+    //fetch data
+
+    let duration = document.getElementById("duration");
+
+    let selling_price = document.getElementById("selling-price-input");
+
+    if(selling_price.value == ''){
+
+        alert("enter selling price value");
+        return;
+    }
+
+    //alert(duration.value)
+
+    calcIncomeReport(selling_price, time);
+}
+
+)
+
+function calcIncomeReport(selling_price, time){
+
+    //fetch data
+
+
+    //alert("hello")
+
+}
