@@ -1,7 +1,11 @@
 
 // get document variables
 const milkAmount = document.getElementById('milk-amount')
-const inputs = document.getElementById('form-inputs');
+
+
+const shedInputs = document.getElementById('form-inputs');
+
+
 const dailyReport = document.getElementById('daily-report')
 const shedA = document.getElementById('shed-a')
 const shedB = document.getElementById('shed-b')
@@ -10,11 +14,10 @@ const shedD = document.getElementById('shed-d')
 
 
 // event listener for form button
-inputs.addEventListener('submit', (e) => {
+shedInputs.addEventListener('submit', (e) => {
     e.preventDefault()
 
     totalProduction();
-
     
 })
 
