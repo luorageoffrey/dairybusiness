@@ -77,17 +77,10 @@ let totalProduction = () => {
             total  = total  + val
         });
         
-        
-
-        
-
+    
         dailyTotal.innerHTML = total
     
-        
-        // // output sales
-        // weeklySales.innerHTML = dailyTotal.innerHTML * 45 *7
-        // yearlySales.innerHTML = dailyTotal.innerHTML * 45 * 365
-        // leapYearSales.innerHTML = dailyTotal.innerHTML * 45 * 366
+      
         
         
     } else {
