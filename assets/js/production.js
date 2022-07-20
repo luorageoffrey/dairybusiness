@@ -9,7 +9,7 @@ class Month {
     }
 
 }
-
+// months of the year
 const year = [
     new Month("January", 31), 
     new Month("February", 29), 
