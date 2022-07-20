@@ -63,7 +63,25 @@ let totalProduction = () => {
         // display daily total 
         
         let dailyTotal = document.getElementById('daily-total') 
-        dailyTotal.innerHTML = Number(shedA.value) + Number(shedB.value) + Number(shedC.value) + Number(shedD.value)
+
+        let shedValues = [
+            Number(shedA.value),
+            Number(shedB.value),
+            Number(shedC.value),
+            Number(shedD.value)
+        ]
+
+        let total = 0;
+
+        shedValues.forEach(val=>{
+            total  = total  + val
+        });
+        
+        
+
+        
+
+        dailyTotal.innerHTML = total
     
         
         // // output sales
