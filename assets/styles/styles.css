@@ -203,17 +203,7 @@ input {
     color: #36856c;
 }
 
-.profile {
-    float: right;
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #36856c;
-    align-items: center;
-    border-radius: 10px;
-    padding: 8px 16px;
-    gap: 8px;
-}
+
 
 .profile i {
     color: white;
@@ -304,7 +294,12 @@ input {
     font-weight: 600;
 }
 
-
+select {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
 
 
 
