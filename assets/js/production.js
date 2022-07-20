@@ -74,7 +74,7 @@ let totalProduction = () => {
         
     } else {
         confirm("fill form correctly")
-        console.log("fill form appropriately")
+        console.log("fill all data in the shed form")
     }
 
     shedA.value = '';
@@ -98,6 +98,8 @@ incomeInputs.addEventListener('submit', (event)=>{
     let selling_price = document.getElementById("selling-price-input");
 
     if(selling_price.value == ''){
+
+        // empty form submitted
 
         alert("enter selling price value");
         return;
