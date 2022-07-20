@@ -18,7 +18,7 @@ There are two pages, just click the production or sales links to navigate throug
 https://luorageoffrey.github.io/dairybusiness/
 
 ## Copyright:
-All rights reserved @ 2022 | Andrew Omondi Ochieng
+All rights reserved @ 2022 | Geoffrey Luora Omondi
 
 ## License:
 MIT License
