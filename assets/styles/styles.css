@@ -135,6 +135,15 @@ body {
 
 
 /* milk-production */
+
+input {
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+
+    border-radius: 5px;
+}
+
 .production-inputs {
     margin: 4% 0;
 }
